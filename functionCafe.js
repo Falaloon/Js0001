@@ -14,9 +14,9 @@ orderReadyMessage("กาแฟ", "few");
 orderReadyMessage("ชาเขียว", "Ink");
 orderReadyMessage("ชาไทย", "May");
 
-// function sayHelloAndOrderReadyMessage(customerName) {
-//   console.log("Welcome ka K'" + customerName);
-//   console.log("เครื่องดื่มของ คุณ" + " " + customerName + " " + "ได้แล้วค่ะ");
-// }
+function sayHelloAndOrderReadyMessage(customerName) {
+  console.log("Welcome ka K'" + customerName);
+  document.getElementById("display").innerHTML = ("เครื่องดื่มของ คุณ" + " " + customerName + " " + "ได้แล้วค่ะ");
+}
 
-// sayHelloAndOrderReadyMessage("Fon");
+sayHelloAndOrderReadyMessage("Fon");
