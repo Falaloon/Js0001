@@ -14,9 +14,10 @@
             <p id="display"></p>
 
             <script>
-                function orderReadyMessage() {
-                    document.getElementById("display").innerHTML = "สวัสดี"
+                function orderReadyMessage(menu, customerName) {
+                    document.getElementById("display").innerHTML = menu + " " + "เครื่องดื่มของคุณ" + " " + customerName + " " + "ได้แล้วค่ะ"
                 }
+                orderReadyMessage("ชาเขียว", "Ink")
             </script>
 </body>
 
