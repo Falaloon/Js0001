@@ -1,27 +1,22 @@
-let shopName = "Nara Cafe";
-let customerName = " Fonfon";
-let yourMenu = "Matcha";
-// let orderReadyMessage =
-//   "เครื่องดื่มของคุณ" + " " + customerName + " " + "ได้แล้วค่ะ";
+let shopName = "Pik-ka Cafe";
 
-let greeting = "Welcome to" + " " + shopName + " " + "รับอะไรดีคะ?";
+function greetingCustomer(customerName = "ลูกค้า") {
+  const result = `Welcome to ${shopName} คุณ ${customerName} รับอะไรดีคะ?`;
+  console.log(result);
+  return result;
+}
 
-let greetingCustomer =
-  "Welcome to" +
-  " " +
-  shopName +
-  " " +
-  "K" +
-  customerName +
-  " " +
-  "รับอะไรดีคะ";
+greetingCustomer("ฝนฝน");
 
-// console.log(greeting);
-// console.log(orderReadyMessage);
+function orderReadyMessage(
+  yourMenu = "น้ำสุ่มประจำวัน",
+  customerName = "ลูกค้า"
+) {
+  const result = `${yourMenu} เครื่องดื่มของคุณ ${customerName} ได้แล้วค่ะ`;
+  console.log(result);
+  return result;
+}
+orderReadyMessage("ชาไทย", "ฝนฝน");
+orderReadyMessage();
 
-customerName = "Ink";
-// orderReadyMessage =
-//   "เครื่องดื่มของคุณ" + " " + customerName + " " + "ได้แล้วค่ะ";
-// console.log(orderReadyMessage);
-// console.log(greetingCustomer);
-
+module.exports = { greetingCustomer, orderReadyMessage };
