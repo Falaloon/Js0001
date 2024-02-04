@@ -1,10 +1,9 @@
-let yourName = "Soontaree";
-let yourAge = 15;
+function nameAndAge(yourName = "กรุณากรอกชื่อ", yourAge = "กรุณากรอกอายุ") {
+  const result = `${yourName} age ${yourAge}y.`;
+  console.log(result);
+  return result;
+}
+nameAndAge("Soontaree", 22);
+nameAndAge();
 
-console.log(yourName);
-console.log(yourAge);
-
-yourName = "Sunday";
-console.log(yourName);
-
-console.log(" hello friends");
+module.exports = { nameAndAge };
