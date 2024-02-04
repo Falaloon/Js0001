@@ -1,20 +1,26 @@
 function callQueue(queues) {
-  console.log("คิวที่ " + queues + " เชิญช่องบริการหมายเลข 3");
-}
-// callQueue(230);
-
-function getTheQueue(number, queuesType) {
-  console.log("ลูกค้า " + number + " ท่าน " + " รับคิว " + queuesType);
-}
-// getTheQueue(4, "A");
-// getTheQueue(6, "B");
-
-function getTheQueueLessThanFour(queuesType) {
-  console.log("ลูกค้า 1-4 ท่าน " + " รับคิว " + queuesType);
-}
-function getTheQueueMoreThanFour(queuesType) {
-  console.log("ลูกค้า 5 ท่านขึ้นไป " + " รับคิว " + queuesType);
+  const result = "คิวที่ " + queues + " เชิญช่องบริการหมายเลข 3";
+  console.log(result);
+  return result;
 }
 
-getTheQueueLessThanFour("A");
-getTheQueueMoreThanFour("B");
+callQueue(230);
+
+function getTheQueue(people) {
+  if (people <= 4) {
+    return "ลูกค้า 1-4 ท่าน " + " รับคิว " + "A";
+  } else {
+    return "ลูกค้า 5 ท่านขึ้นไป " + " รับคิว " + "B";
+  }
+}
+
+getTheQueue(4);
+getTheQueue(8);
+
+let getQueueA = getTheQueue(4);
+console.log(getQueueA);
+
+let getQueueB = getTheQueue(8);
+console.log(getQueueB);
+
+module.exports = { callQueue, getTheQueue };
