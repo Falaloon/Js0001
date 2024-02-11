@@ -1,12 +1,14 @@
 let shopName = "Pik-ka Cafe";
+let customerName = "ลูกค้า";
+let yourMenu = "น้ำสุ่มประจำวัน";
 
-function greetingCustomer(customerName = "ลูกค้า") {
+function greetingCustomer(customerName) {
   const result = `Welcome to ${shopName} คุณ ${customerName} รับอะไรดีคะ?`;
   console.log(result);
   return result;
 }
-
-greetingCustomer("ฝนฝน");
+customerName = "ฝนฝน";
+greetingCustomer(customerName);
 
 function orderReadyMessage(
   yourMenu = "น้ำสุ่มประจำวัน",
@@ -16,7 +18,9 @@ function orderReadyMessage(
   console.log(result);
   return result;
 }
-orderReadyMessage("ชาไทย", "ฝนฝน");
+yourMenu = "ชาไทย";
+customerName = "ฝนฝน";
+orderReadyMessage(yourMenu, customerName);
 orderReadyMessage();
 
 module.exports = { greetingCustomer, orderReadyMessage };
