@@ -1,4 +1,14 @@
+//รับค่าวัน
+//เทียบวัน กับสีมงคลประจำวัน
+//แสดงผล
+
+//ดูโค้ดที่มันซ้ำๆ มีรูปแบบเหมือนกัน
+//ดูว่าสิ่งที่เหมือนนั้นทำเป็นโครงได้ไหม
+//ดูว่าสิ่งที่ต่างนั้นจับลงในโครงแล้วความหมายต่างจากเดิมไหม
+//ถ้าเราสามารถจับสิ่งนั้นแยก และนำมาประกอบกันได้ก็สร้างให้เป็นตัวแปร
+
 function luckyColorsForDOB(numberOfDays) {
+  //ประเทภวัน
   const daysOfWeek = [
     "อาทิตย์",
     "จันทร์",
@@ -48,14 +58,26 @@ function luckyColorsForDOB(numberOfDays) {
       luckyColors = "สีแดง สีเหลือง สีฟ้า สีน้ำเงิน สีชมพู สีน้ำตาล";
       unLuckyColors = "สีเขียวอ่อนและสีเขียวแก่ ";
       break;
+    default:
+      luckyColors = "";
+      unLuckyColors = "";
   }
-  const result = `คนที่เกิดวัน ${daysOfWeek[numberOfDays]} สีที่ใช้แล้วเสริมสิริมงคลได้แก่: ${luckyColors} สีที่ควรเลี่ยง: ${unLuckyColors}`;
-  return result;
+
+  if (luckyColors === "" && unLuckyColors === "") {
+    const result = `กรอกวันเกิดเป็นเลขตามลำดับต่อไปนี้ อาทิตย์ = 0, เสาร์ = 6`;
+    return result;
+  } else {
+    const result = `คนที่เกิดวัน ${daysOfWeek[numberOfDays]}\nสีที่ใช้แล้วเสริมสิริมงคลได้แก่: ${luckyColors}\nสีที่ควรเลี่ยง: ${unLuckyColors}`;
+    return result;
+  }
 }
+
+console.log(luckyColorsForDOB(6));
+console.log(luckyColorsForDOB(7));
 
 module.exports = luckyColorsForDOB;
 
-//case input number 0-6
-//case input string
-//case empty
-//improve result
+//case input number 0-6//
+//case input string//
+//case empty//
+//improve result//
